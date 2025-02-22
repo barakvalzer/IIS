@@ -68,8 +68,7 @@ catch {
 $taskName = "UploadIISLogs"
 if (!(Get-ScheduledTask -TaskName $taskName)) {
     try {
-        $bucketname = "${aws_s3_bucket.iis_logs.id}" #Dynamic bucket name.
-        $Action = New-ScheduledTaskAction -Execute "C:\Program Files\Amazon\AWSCLIV2\aws.exe" -Argument "s3 cp C:\inetpub\logs\LogFiles s3://$bucketname/logs --recursive"
+        $Action = New-ScheduledTaskAction -Execute "C:\Program Files\Amazon\AWSCLIV2\aws.exe" -Argument "s3 cp C:\inetpub\logs\LogFiles s3://iis-logs-unique-bucket-name/logs --recursive"
         $Trigger = New-ScheduledTaskTrigger -Daily -At "00:00"
         Register-ScheduledTask -TaskName "UploadIISLogs" -Action $Action -Trigger $Trigger
     }
