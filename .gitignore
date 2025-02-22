@@ -6,7 +6,7 @@ terraform/.terraform/
 terraform/.terraform.lock.hcl
 terraform/*.tfvars
 terraform/*.tfbackup
-
+my-key-pair.pem
 # Ignore logs and temporary files
 *.log
 *.bak

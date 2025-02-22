@@ -7,6 +7,7 @@ This repository provides Terraform scripts to provision an EC2 instance running 
 - Terraform installed
 - AWS CLI installed and configured with appropriate IAM credentials
 - A valid AWS account
+- Generated key for windows machines
 
 ## Setup Instructions
 
