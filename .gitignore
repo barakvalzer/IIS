@@ -1,8 +1,13 @@
-# Ignore Terraform files
-*.tfstate
-*.tfstate.*
-*.tfvars
-.terraform/
-.terraform.lock.hcl
-*.tfbackup
-crash.log
+# Ignore Terraform state and lock files
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/*.tfvars
+terraform/*.tfbackup
+
+# Ignore logs and temporary files
+*.log
+*.bak
+*.tmp
+logs/
