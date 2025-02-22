@@ -1,1 +1,10 @@
+# Terraform state files
 .terraform/
+*.tfstate
+*.tfstate.backup
+*.terraform.lock.hcl
+
+# AWS credentials
+credentials/
+
+# PowerShell scripts can be kept in source control, but avoid any sensitive data.
